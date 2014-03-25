@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery notReady</title>
+        <script type="text/javascript" src="src/jquery.notready.js"></script>
+    </head>
+	<body>
+        <script type="text/javascript">
+            jQuery(document).bind("ready", function()
+            {
+                console.log('jQuery(document).bind("ready", callback)');
+            });
+            jQuery(document).ready(function()
+            {
+                console.log('jQuery(document).ready(callback)');
+            });
+            jQuery().ready(function()
+            {
+                console.log('jQuery().ready(callback)');
+            });
+            jQuery(function()
+            {
+                console.log('jQuery(callback)');
+            });
+        </script>
+        <script type="text/javascript" src="src/vendor/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="src/jquery.ready.js"></script>
+	</body>
+</html>

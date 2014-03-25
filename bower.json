@@ -1,0 +1,33 @@
+{
+    "name": "jquery.notready",
+    "title": "jQuery notReady",
+    "version": "0.1",
+    "homepage": "https://github.com/johansatge/jquery-notready",
+    "authors": [
+        "Johan <contact@johansatge.fr>"
+    ],
+    "main": [
+        "src/jquery-notready.min.js",
+        "src/jquery-ready.min.js"
+    ],
+    "keywords": [
+        "jquery",
+        "library",
+        "javascript"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "demo",
+        "node_modules",
+        ".gitignore",
+        "Gruntfile.js",
+        "index.html",
+        "LICENSE",
+        "package.json",
+        "README.md"
+    ],
+    "dependencies": {
+        "jquery": ">=1.8"
+    },
+    "description": "@todo"
+}
