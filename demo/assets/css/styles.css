@@ -1,0 +1,62 @@
+/**
+ * Global page styles
+ */
+html, body, div, button, p, img, h1, h2, h3, h4, pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333333;
+}
+
+.main {
+    position: relative;
+    width: 600px;
+    margin: 80px auto;
+}
+
+.main h1 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.main h2 {
+    font-weight: 400;
+    padding: 10px 0 0 0;
+    margin: 0 0 20px 0;
+    line-height: 27px;
+    font-size: 27px;
+}
+
+.main p {
+    line-height: 28px;
+    margin: 0 0 20px 0;
+}
+
+.main pre {
+    background: #444444;
+    color: #ffffff;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+    font-size: 16px;
+}
+
+.fork-me {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 141px;
+    height: 141px;
+    top: 0;
+    right: 0;
+    background: url(images/fork-me.png) no-repeat 0 0;
+}

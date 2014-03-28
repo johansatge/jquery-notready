@@ -3,27 +3,45 @@
     <head>
         <meta charset="utf-8">
         <title>jQuery notReady</title>
-        <script type="text/javascript" src="src/jquery.notready.js"></script>
+        <link href="//fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+        <link href="demo/assets/css/styles.css" rel="stylesheet" type="text/css">
+        <script src="src/jquery.notready.js" type="text/javascript"></script>
     </head>
 	<body>
-        <script type="text/javascript">
-            jQuery(document).bind("ready", function()
-            {
-                console.log('jQuery(document).bind("ready", callback)');
-            });
-            jQuery(document).ready(function()
-            {
-                console.log('jQuery(document).ready(callback)');
-            });
-            jQuery().ready(function()
-            {
-                console.log('jQuery().ready(callback)');
-            });
-            jQuery(function()
-            {
-                console.log('jQuery(callback)');
-            });
-        </script>
+        <a class="fork-me" href="https://github.com/johansatge/jquery-notready"></a>
+        <div class="main">
+            <h1>
+                jQuery notReady
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, vehicula sit amet risus vel, bibendum adipiscing mi.<br>
+                Pellentesque lobortis erat sed metus condimentum, quis eleifend odio lobortis. Maecenas sit amet enim in magna tempor mollis.<br>
+                Curabitur ut tortor venenatis, luctus velit vitae, elementum tortor.
+            </p>
+            <h2>
+                Installation
+            </h2>
+            <p>
+                Proin sit amet interdum mi. Aliquam lectus nunc, bibendum sed ullamcorper sed, aliquam at sapien.
+                In hac habitasse platea dictumst.
+                Nunc aliquam, risus eget tincidunt blandit, nunc orci interdum dui, ac sodales purus tellus vel nibh.
+            </p>
+            <pre>bower install blabla</pre>
+            <h2>
+                Usage
+            </h2>
+            <pre>jQuery(document).bind("ready", callback)</pre>
+            <pre>jQuery(document).ready(callback)</pre>
+            <pre>jQuery().ready(callback)</pre>
+            <pre>jQuery(callback)</pre>
+            <h2>Changelog</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, vehicula sit amet risus vel, bibendum adipiscing mi.<br>
+                Pellentesque lobortis erat sed metus condimentum, quis eleifend odio lobortis. Maecenas sit amet enim in magna tempor mollis.<br>
+                Curabitur ut tortor venenatis, luctus velit vitae, elementum tortor.
+            </p>
+        </div>
         <script type="text/javascript" src="src/vendor/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="src/jquery.ready.js"></script>
 	</body>
