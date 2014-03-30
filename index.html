@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>jQuery notReady</title>
         <link href="//fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
         <link href="demo/assets/css/styles.css" rel="stylesheet" type="text/css">
         <script src="src/jquery.notready.js" type="text/javascript"></script>
     </head>
@@ -14,42 +15,63 @@
                 jQuery notReady
             </h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, vehicula sit amet risus vel, bibendum adipiscing mi.<br>
-                Pellentesque lobortis erat sed metus condimentum, quis eleifend odio lobortis. Maecenas sit amet enim in magna tempor mollis.<br>
-                Curabitur ut tortor venenatis, luctus velit vitae, elementum tortor.
+                Let's consider that your webpage needs to call jQuery stuff when the DOM is ready, by using this common syntax:
+            </p>
+            <pre>
+&lt;div class="my-div"&gt;&lt;/div&gt;
+&lt;script&gt;
+    jQuery(document).ready(function($)
+    {
+        $('.my-div').jQueryStuff();
+    })
+&lt;/script&gt;</pre>
+            <p>
+                This code needs jQuery to be loaded first. This is a problem if you want, for performance issues, load it at the bottom of the page.<br>
+                The <code>jquery.notready</code> script solves it by declaring a fake <code>jQuery</code> object that you can use everywhere on the page,
+                and that will be replaced by the real one when it is loaded.<br>
+                <em>Based on an <a target="_blank" href="http://samsaffron.com/archive/2012/02/17/stop-paying-your-jquery-tax">article of Sam Affron</a></em>.
             </p>
             <h2>
                 Installation
             </h2>
             <p>
-                Proin sit amet interdum mi. Aliquam lectus nunc, bibendum sed ullamcorper sed, aliquam at sapien.
-                In hac habitasse platea dictumst.
-                Nunc aliquam, risus eget tincidunt blandit, nunc orci interdum dui, ac sodales purus tellus vel nibh.
+                The easiest method using <a target="_blank" href="http://bower.io/">bower</a>:
             </p>
-            <pre>bower install blabla</pre>
+            <pre>bower install jquery.notready</pre>
             <p>
-                Proin sit amet interdum mi. Aliquam lectus nunc, bibendum sed ullamcorper sed, aliquam at sapien.
-                In hac habitasse platea dictumst.
-                Nunc aliquam, risus eget tincidunt blandit, nunc orci interdum dui, ac sodales purus tellus vel nibh.
+                Or you may manually install the <code>jquery.notready.min.js</code>
+                and <code>jquery.ready.min.js</code> scripts wherever you want in your project.
             </p>
-            <pre>bower install blabla</pre>
             <p>
-                Proin sit amet interdum mi. Aliquam lectus nunc, bibendum sed ullamcorper sed, aliquam at sapien.
-                In hac habitasse platea dictumst.
-                Nunc aliquam, risus eget tincidunt blandit, nunc orci interdum dui, ac sodales purus tellus vel nibh.
+                Then you just have to call the first script in your <code>&lt;head&gt;</code>:
             </p>
+            <pre>
+&lt;script src="src/jquery.notready.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</pre>
+            <p>
+                And the second one next to your jQuery call, at the bottom of the page:
+            </p>
+            <pre>
+&lt;script src="src/vendor/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="src/jquery.ready.js"&gt;&lt;/script&gt;</pre>
             <h2>
                 Usage
             </h2>
+            <p>
+                Just make your usual jQuery calls on the page.<br>
+                For now, the following syntaxes are supported:
+            </p>
             <pre>jQuery(document).bind("ready", callback)</pre>
             <pre>jQuery(document).ready(callback)</pre>
             <pre>jQuery().ready(callback)</pre>
             <pre>jQuery(callback)</pre>
-            <h2>Changelog</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, vehicula sit amet risus vel, bibendum adipiscing mi.<br>
-                Pellentesque lobortis erat sed metus condimentum, quis eleifend odio lobortis. Maecenas sit amet enim in magna tempor mollis.<br>
-                Curabitur ut tortor venenatis, luctus velit vitae, elementum tortor.
+                Please note that <code>$</code> is not supported to avoid compatibility issues.
+            </p>
+            <h2>Changelog</h2>
+            <h3>0.1</h3>
+            <p>
+                Initial version
             </p>
         </div>
         <script type="text/javascript" src="src/vendor/jquery/dist/jquery.min.js"></script>
