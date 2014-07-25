@@ -7,7 +7,7 @@ module.exports = function(grunt)
         {
             js:
             {
-                files: 'src/*.js',
+                files: 'assets/js/*.js',
                 tasks: 'uglify:js',
                 options:
                 {
@@ -25,8 +25,8 @@ module.exports = function(grunt)
             {
                 files:
                 {
-                    'src/jquery.notready.min.js': 'src/jquery.notready.js',
-                    'src/jquery.ready.min.js': 'src/jquery.ready.js'
+                    'assets/js/jquery.notready.min.js': 'assets/js/jquery.notready.js',
+                    'assets/js/jquery.ready.min.js': 'assets/js/jquery.ready.js'
                 }
             }
         }

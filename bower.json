@@ -7,8 +7,8 @@
         "Johan <contact@johansatge.fr>"
     ],
     "main": [
-        "src/jquery-notready.min.js",
-        "src/jquery-ready.min.js"
+        "assets/js/jquery-notready.min.js",
+        "assets/js/jquery-ready.min.js"
     ],
     "keywords": [
         "jquery",
@@ -17,7 +17,7 @@
     ],
     "license": "MIT",
     "ignore": [
-        "demo",
+        "assets/css",
         "node_modules",
         ".gitignore",
         "Gruntfile.js",

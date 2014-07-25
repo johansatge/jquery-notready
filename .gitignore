@@ -1,2 +1,3 @@
-src/vendor
+assets/js/vendor
 node_modules
+.idea
